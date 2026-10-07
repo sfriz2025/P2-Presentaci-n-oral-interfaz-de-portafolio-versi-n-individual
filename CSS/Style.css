@@ -1,0 +1,383 @@
+/* ==========================================================
+   Portafolio personal
+   Estilos mobile-first: móvil, tablet (768px) y escritorio (1024px)
+   ========================================================== */
+
+/* ---- Colores y medidas reutilizables ---- */
+:root {
+  --tinta: #14213d;
+  --fondo: #f3f6fb;
+  --superficie: #ffffff;
+  --acento: #1d4ed8;
+  --borde: #d8e0ec;
+  --ancho-max: 68rem;
+  --espacio: 1rem;
+  --radio: 1rem;
+  --sombra: 0 12px 32px rgb(20 33 61 / 8%);
+}
+
+/* ---- Base y tipografía ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--tinta);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 2.25rem;
+  line-height: 1.12;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 1.7rem;
+  line-height: 1.25;
+}
+
+h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.lead {
+  color: #344563;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--acento);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+/* ---- Accesibilidad y navegación por teclado ---- */
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+.saltar {
+  position: absolute;
+  top: -4rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.saltar:focus {
+  top: 0.5rem;
+}
+
+/* ---- Cabecera y navegación ---- */
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem var(--espacio);
+  background: var(--tinta);
+  color: #fff;
+}
+
+.marca {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.cabecera ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cabecera a {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.cabecera a:hover {
+  background: rgb(255 255 255 / 14%);
+}
+
+.cabecera :focus-visible {
+  outline-color: #fff;
+}
+
+/* ---- Contenido principal y secciones ---- */
+main {
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 var(--espacio);
+}
+
+main > section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+main > section:last-child {
+  border-bottom: 0;
+}
+
+/* Presentación principal */
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: linear-gradient(135deg, #fff 0%, #edf3ff 100%);
+  box-shadow: var(--sombra);
+}
+
+.hero figure {
+  max-width: 14rem;
+  margin: 0 auto;
+}
+
+.hero img {
+  aspect-ratio: 1;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgb(20 33 61 / 14%);
+}
+
+/* Botones de llamada a la acción */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: var(--acento);
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+  background: #1e40af;
+  color: #fff;
+  box-shadow: 0 6px 16px rgb(29 78 216 / 22%);
+}
+
+/* ---- Trabajos y tarjetas ---- */
+.rejilla {
+  display: grid;
+  gap: 1rem;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.35rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  box-shadow: 0 4px 16px rgb(20 33 61 / 5%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta p {
+  flex-grow: 1;
+  color: #465570;
+}
+
+.tarjeta a {
+  font-weight: 650;
+}
+
+/* ---- Formulario de contacto ---- */
+form {
+  max-width: 34rem;
+  padding: 1.25rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  box-shadow: 0 4px 16px rgb(20 33 61 / 5%);
+}
+
+.campo {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 650;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid #8996aa;
+  border-radius: 0.45rem;
+  background: var(--superficie);
+  color: var(--tinta);
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--acento);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgb(29 78 216 / 15%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ---- Pie de página ---- */
+.pie {
+  padding: 1.5rem var(--espacio);
+  background: var(--tinta);
+  color: #fff;
+  text-align: center;
+}
+
+.pie p {
+  margin: 0;
+}
+
+/* ==========================================================
+   TABLET · desde 768px
+   ========================================================== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 1.85rem;
+  }
+
+  .cabecera {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+
+  .hero {
+    grid-template-columns: 12rem 1fr;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+
+  .hero figure {
+    margin: 0;
+  }
+
+  .rejilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+}
+
+/* ==========================================================
+   ESCRITORIO · desde 1024px
+   ========================================================== */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 16rem 1fr;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .hero figure {
+    max-width: none;
+  }
+
+  .rejilla {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  main > section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,138 @@
+:root {
+    --verde-oscuro: #173b2b;
+    --verde-medio: #315f3b;
+    --verde-claro: #eaf1df;
+    --crema: #f7f6ee;
+    --texto: #203127;
+    --acento: #dce9aa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    background: var(--verde-claro);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    padding: 2.25rem 1rem;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, var(--verde-oscuro), #47734a);
+}
+
+header h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    letter-spacing: 0.04em;
+}
+
+nav {
+    padding: 1rem clamp(1rem, 5vw, 3rem) 1.25rem;
+    color: white;
+    background: var(--verde-medio);
+}
+
+nav h3 {
+    margin: 0 0 0.5rem;
+    text-align: left;
+}
+
+nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+nav a {
+    color: white;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--acento);
+}
+
+main {
+    width: min(100% - 2rem, 900px);
+    margin: 2rem auto;
+}
+
+article {
+    margin: 0 0 1.5rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    overflow: hidden;
+    background: var(--crema);
+    border: 1px solid #d7e2ce;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgb(23 59 43 / 9%);
+}
+
+article h3 {
+    margin: 0 0 1rem;
+    color: var(--verde-oscuro);
+    font-size: 1.45rem;
+    text-align: left;
+}
+
+article p {
+    margin: 1rem 0 0;
+}
+
+.foto {
+    display: block;
+    width: min(100%, 420px);
+    max-height: 320px;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+article embed,
+article video {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 10px;
+    background: #111;
+}
+
+footer {
+    padding: 1.25rem;
+    color: white;
+    text-align: center;
+    background: var(--verde-oscuro);
+}
+
+@media (max-width: 600px) {
+    nav ol {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main {
+        width: min(100% - 1.25rem, 900px);
+        margin: 1rem auto;
+    }
+
+    article {
+        border-radius: 10px;
+    }
+}
