@@ -28,35 +28,35 @@
       <figure>
         <img src="img/foto-perfil.svg" alt="Foto de Scarleth" width="400" height="400">
       </figure>
-      <div>
+      <article>
         <h1 id="titulo-sobre-mi">Hola, soy Scarleth</h1>
         <p class="lead">Estudiante de primer año de Ingeniería Civil en Informática en la UC Temuco. Me interesa desarrollo web, bases de datos, etc.</p>
         <p>Estoy aprendiendo HTML, CSS y Git, y busco oportunidades para aplicar mis conocimientos en proyectos reales.</p>
         <a class="boton" href="#contacto">Contáctame</a>
-      </div>
+      </article>
     </section>
 
     <section id="trabajos" aria-labelledby="titulo-trabajos">
       <h2 id="titulo-trabajos">Trabajos del semestre</h2>
-      <div class="rejilla">
-        <article class="tarjeta">
+      <ul class="rejilla">
+        <li><article class="tarjeta">
           <h3><a class="tarjeta-enlace" href="Proyectos/Proyecto2/index.html">Sitio de restaurante</a></h3>
           <p>Sitio multipágina con menú de platos e imágenes. Práctica de HTML semántico y CSS.</p>
           <ul class="etiquetas">
             <li>HTML</li>
             <li>CSS</li>
           </ul>
-        </article>
+        </article></li>
 
-        <article class="tarjeta">
+        <li><article class="tarjeta">
           <h3><a class="tarjeta-enlace" href="Proyectos/Proyecto3/index.html">Guía de árboles</a></h3>
           <p>Página sobre tipos de árboles con imágenes y navegación por enlaces internos. Práctica de HTML.</p>
           <ul class="etiquetas">
             <li>HTML</li>
             <li>CSS</li>
           </ul>
-        </article>
-      </div>
+        </article></li>
+      </ul>
     </section>
 
     <section id="contacto" aria-labelledby="titulo-contacto">
@@ -64,18 +64,18 @@
       <p>Escríbeme y te responderé lo antes posible.</p>
       <!-- Cada campo tiene su <label> asociado con for/id (requisito de accesibilidad) -->
       <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
-        <div class="campo">
+        <p class="campo">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-        </div>
-        <div class="campo">
+        </p>
+        <p class="campo">
           <label for="correo">Correo electrónico</label>
           <input type="email" id="correo" name="correo" autocomplete="email" required>
-        </div>
-        <div class="campo">
+        </p>
+        <p class="campo">
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        </div>
+        </p>
         <button class="boton" type="submit">Enviar mensaje</button>
       </form>
     </section>
