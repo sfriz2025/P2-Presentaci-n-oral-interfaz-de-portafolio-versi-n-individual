@@ -66,10 +66,18 @@ git clone https://github.com/sfriz2025/P2-Presentaci-n-oral-interfaz-de-portafol
 - Los campos del formulario tienen etiquetas asociadas mediante `for` e `id`, además de validación nativa para campos requeridos y correo electrónico.
 - La hoja de estilos respeta la preferencia del sistema por reducir el movimiento.
 
+
+## Visualización en distintos dispositivos
+
+El portafolio se adapta a distintos tamaños de pantalla. Estas capturas muestran su visualización en computador, tablet y teléfono:
+
+| Computador | Tablet | Teléfono |
+|---|---|---|
+| ![Vista del portafolio en computador](assets/img/IMG2.png) | ![Vista del portafolio en tablet](assets/img/IMG3.png) | ![Vista del portafolio en teléfono](assets/img/IMG4.png) |
 ## Aprendizajes y mejoras
 
 - **Aprendizajes:** practiqué la estructura semántica en HTML, la creación de diseños adaptables con CSS y la organización de páginas y recursos en carpetas.
-- **Próximas mejoras:** completar y revisar todas las páginas de los proyectos, agregar capturas del portafolio en móvil, tablet y escritorio, y verificar el contraste con una herramienta de accesibilidad.
+- **Próximas mejoras:** completar y revisar todas las páginas de los proyectos y verificar el contraste con una herramienta de accesibilidad.
 
 ## Autora
 
